@@ -81,6 +81,10 @@ const TechTag = styled.span`
 const ProjectLinks = styled.div`
   display: flex;
   gap: 1rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 const ProjectLink = styled.a`
@@ -158,8 +162,8 @@ const Projects = () => {
                 <TechTag key={tech}>{tech}</TechTag>
               ))}
             </ProjectTech>
-            {project.github && project.live && (
-              <ProjectLinks>
+            <ProjectLinks>
+              {project.github && (
                 <ProjectLink
                   href={project.github}
                   target="_blank"
@@ -167,6 +171,8 @@ const Projects = () => {
                 >
                   <FaGithub />
                 </ProjectLink>
+              )}
+              {project.live && (
                 <ProjectLink
                   href={project.live}
                   target="_blank"
@@ -174,8 +180,8 @@ const Projects = () => {
                 >
                   <FaExternalLinkAlt />
                 </ProjectLink>
-              </ProjectLinks>
-            )}
+              )}
+            </ProjectLinks>
           </ProjectCard>
         ))}
       </ProjectsGrid>
