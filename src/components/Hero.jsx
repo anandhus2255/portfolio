@@ -39,7 +39,7 @@ const HeroContent = styled.div`
 const TextContent = styled.div`
   h1 {
     font-size: 5rem;
-    color: #ccd6f6;
+    color: ${props => props.theme.heading};
     margin-bottom: 1rem;
     line-height: 1.1;
     font-weight: 700;
@@ -56,7 +56,7 @@ const TextContent = styled.div`
 
   h2 {
     font-size: 2.5rem;
-    color: #8892b0;
+    color: ${props => props.theme.heading};
     margin-bottom: 2rem;
     font-weight: 500;
 
@@ -170,15 +170,13 @@ const SocialIcon = styled(motion.a)`
 `
 
 const NameSpan = styled.span`
-  color: #64ffda;
+  color: ${props => props.theme.heading};
   @media (max-width: 768px) {
     font-size: 0.8em;
   }
   @media (max-width: 480px) {
     font-size: 60px;
   }
-
-  
 `
 
 const GreetingText = styled.span`

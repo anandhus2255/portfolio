@@ -7,9 +7,10 @@ const Nav = styled.nav`
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(10, 25, 47, 0.85);
+  background: ${props => props.theme.navBg};
   backdrop-filter: blur(10px);
   padding: 1rem 2rem;
+  transition: all 0.3s ease;
 `
 
 const NavContainer = styled.div`
@@ -21,7 +22,7 @@ const NavContainer = styled.div`
 `
 
 const Logo = styled(motion.div)`
-  color: #64ffda;
+  color: ${props => props.theme.primary};
   font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
@@ -37,13 +38,14 @@ const NavLinks = styled.div`
 `
 
 const NavLink = styled(motion.a)`
-  color: ${props => props.active ? '#64ffda' : '#8892b0'};
+  color: ${props => props.active ? props.theme.primary : props.theme.text};
   text-decoration: none;
   font-size: 0.9rem;
   cursor: pointer;
+  transition: color 0.3s ease;
   
   &:hover {
-    color: #64ffda;
+    color: ${props => props.theme.primary};
   }
 `
 

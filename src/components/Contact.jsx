@@ -8,7 +8,7 @@ const ContactSection = styled.section`
 
 const SectionTitle = styled.h2`
   font-size: 2.5rem;
-  color: #ccd6f6;
+  color: ${props => props.theme.heading};
   margin-bottom: 3rem;
   position: relative;
 
@@ -19,7 +19,7 @@ const SectionTitle = styled.h2`
     bottom: -10px;
     width: 60px;
     height: 4px;
-    background: #64ffda;
+    background: ${props => props.theme.primary};
   }
 `
 
@@ -30,7 +30,7 @@ const ContactContent = styled.div`
 `
 
 const ContactText = styled.p`
-  color: #8892b0;
+  color: ${props => props.theme.text};
   font-size: 1.2rem;
   margin-bottom: 3rem;
   line-height: 1.6;
@@ -44,7 +44,7 @@ const SocialLinks = styled.div`
 `
 
 const SocialLink = styled(motion.a)`
-  color: #8892b0;
+  color: ${props => props.theme.text};
   font-size: 2rem;
   transition: all 0.3s ease;
   display: flex;
@@ -54,11 +54,11 @@ const SocialLink = styled(motion.a)`
 
   span {
     font-size: 1rem;
-    color: #64ffda;
+    color: ${props => props.theme.primary};
   }
 
   &:hover {
-    color: #64ffda;
+    color: ${props => props.theme.primary};
     transform: translateY(-5px);
   }
 `

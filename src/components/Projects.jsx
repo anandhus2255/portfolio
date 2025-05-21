@@ -8,7 +8,7 @@ const ProjectsSection = styled.section`
 
 const SectionTitle = styled.h2`
   font-size: 2.5rem;
-  color: #ccd6f6;
+  color: ${props => props.theme.heading};
   margin-bottom: 3rem;
   position: relative;
 
@@ -19,7 +19,7 @@ const SectionTitle = styled.h2`
     bottom: -10px;
     width: 60px;
     height: 4px;
-    background: #64ffda;
+    background: ${props => props.theme.primary};
   }
 `
 
@@ -30,7 +30,7 @@ const ProjectsGrid = styled.div`
 `
 
 const ProjectCard = styled(motion.div)`
-  background: #112240;
+  background: ${props => props.theme.cardBg};
   border-radius: 4px;
   padding: 2rem;
   position: relative;
@@ -52,13 +52,13 @@ const ProjectImage = styled.img`
 `
 
 const ProjectTitle = styled.h3`
-  color: #ccd6f6;
+  color: ${props => props.theme.heading};
   font-size: 1.5rem;
   margin-bottom: 1rem;
 `
 
 const ProjectDescription = styled.p`
-  color: #8892b0;
+  color: ${props => props.theme.text};
   margin-bottom: 1.5rem;
   line-height: 1.6;
 `
@@ -71,8 +71,8 @@ const ProjectTech = styled.div`
 `
 
 const TechTag = styled.span`
-  background: rgba(100, 255, 218, 0.1);
-  color: #64ffda;
+  background: ${props => props.theme.cardBg};
+  color: ${props => props.theme.primary};
   padding: 0.25rem 0.75rem;
   border-radius: 3px;
   font-size: 0.9rem;
@@ -88,12 +88,12 @@ const ProjectLinks = styled.div`
 `
 
 const ProjectLink = styled.a`
-  color: #8892b0;
+  color: ${props => props.theme.text};
   font-size: 1.2rem;
   transition: color 0.3s ease;
 
   &:hover {
-    color: #64ffda;
+    color: ${props => props.theme.primary};
   }
 `
 

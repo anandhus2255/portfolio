@@ -7,7 +7,7 @@ const AboutSection = styled.section`
 
 const SectionTitle = styled.h2`
   font-size: 2.5rem;
-  color: #ccd6f6;
+  color: ${props => props.theme.heading};
   margin-bottom: 3rem;
   position: relative;
 
@@ -18,7 +18,7 @@ const SectionTitle = styled.h2`
     bottom: -10px;
     width: 60px;
     height: 4px;
-    background: #64ffda;
+    background: ${props => props.theme.primary};
   }
 `
 
@@ -46,7 +46,7 @@ const SkillsContainer = styled.div`
 `
 
 const SkillItem = styled(motion.div)`
-  background: rgba(100, 255, 218, 0.1);
+  background: ${props => props.theme.cardBg};
   padding: 1rem;
   border-radius: 4px;
   display: flex;
@@ -54,7 +54,7 @@ const SkillItem = styled(motion.div)`
   gap: 1rem;
 
   span {
-    color: #64ffda;
+    color: ${props => props.theme.primary};
   }
 `
 
@@ -116,4 +116,4 @@ const About = () => {
   )
 }
 
-export default About 
+export default About
