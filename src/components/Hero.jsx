@@ -175,7 +175,7 @@ const NameSpan = styled.span`
     font-size: 0.8em;
   }
   @media (max-width: 480px) {
-    font-size: 60px;
+    font-size: 35px;
   }
 `
 
