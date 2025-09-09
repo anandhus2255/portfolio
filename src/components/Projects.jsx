@@ -185,7 +185,7 @@ const Projects = () => {
           </ProjectCard>
         ))}
       </ProjectsGrid>
-      <SectionTitle>Hosted Projects</SectionTitle>
+      <SectionTitle style={{ marginTop: '70px' }}>Hosted Projects</SectionTitle>
       <ProjectsGrid>
         {[
           {
