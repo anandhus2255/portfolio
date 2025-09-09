@@ -185,6 +185,77 @@ const Projects = () => {
           </ProjectCard>
         ))}
       </ProjectsGrid>
+      <SectionTitle>Hosted Projects</SectionTitle>
+      <ProjectsGrid>
+        {[
+          {
+            title: 'Ceelar Innovative Developers - Official Website',
+            description: 'Corporate site for a software development company with service pages and contact flow.',
+            tech: ['Production', 'Corporate'],
+            live: 'https://thecid.in'
+          },
+          {
+            title: 'Kuvil - Official Website',
+            description: 'Brand website for instant Avil milk products with product showcase and responsive UI.',
+            tech: ['Production', 'Brand'],
+            live: 'https://kuvil.in'
+          },
+          {
+            title: 'MES Mampad Autonomous College - QP Printing Software',
+            description: 'Question paper printing workflow app hosted using AWS EC2 for college Question Paper Printing.',
+            tech: ['AWS EC2', 'Internal Tool'],
+            live: 'https://qpsolutions.in'
+          },
+          {
+            title: 'Aadhi Naturals - E-commerce Website',
+            description: 'E-commerce storefront for natural products with clean product-first design. Hosted using AWS EC2.',
+            tech: ['E-commerce', 'Production', 'AWS EC2'],
+            live: 'https://aadhinaturals.in'
+          },
+          {
+            title: 'Aeromate Travels - Website',
+            description: 'Travel services website with offerings overview and contact actions.',
+            tech: ['Business', 'Production'],
+            live: 'http://aeromatetravels.com/'
+          },
+          {
+            title: 'Personal Portfolio',
+            description: 'My portfolio showcasing projects, skills, and contact information.',
+            tech: ['Portfolio', 'Production'],
+            live: 'https://anandhu-s.vercel.app/'
+          }
+        ].map((item, index) => (
+          <ProjectCard
+            key={item.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+          >
+            <ProjectTitle>{item.title}</ProjectTitle>
+            {item.description && (
+              <ProjectDescription>{item.description}</ProjectDescription>
+            )}
+            {item.tech && (
+              <ProjectTech>
+                {item.tech.map(tag => (
+                  <TechTag key={tag}>{tag}</TechTag>
+                ))}
+              </ProjectTech>
+            )}
+            <ProjectLinks>
+              <ProjectLink
+                href={item.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open ${item.title}`}
+              >
+                <FaExternalLinkAlt />
+              </ProjectLink>
+            </ProjectLinks>
+          </ProjectCard>
+        ))}
+      </ProjectsGrid>
     </ProjectsSection>
   )
 }

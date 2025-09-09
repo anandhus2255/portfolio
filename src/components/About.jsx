@@ -67,7 +67,9 @@ const About = () => {
     'JavaScript',
     'HTML5',
     'CSS3',
-    'PHP'
+    'PHP',
+    'AWS',
+    'AWS EC2'
   ]
 
   return (
@@ -83,7 +85,8 @@ const About = () => {
           >
             Hello! I'm a MERN stack developer with expertise in building modern web applications.
             I specialize in creating responsive and scalable solutions using React, Node.js, Express,
-            and MongoDB. My journey in web development has equipped me with a strong foundation in
+            and MongoDB. I also deploy and manage production apps hosted on AWS, primarily using EC2.
+            My journey in web development has equipped me with a strong foundation in
             both front-end and back-end technologies.
           </motion.p>
           <motion.p
