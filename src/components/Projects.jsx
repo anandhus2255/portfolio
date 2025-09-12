@@ -203,9 +203,8 @@ const Projects = () => {
           {
             title: 'MES Mampad Autonomous College - QP Printing Software',
             description: 'Question paper printing workflow app hosted using AWS EC2 for college Question Paper Printing.',
-            tech: ['AWS EC2', 'Internal Tool'],
-            live: 'https://qpsolutions.in'
-          },
+            tech: ['AWS EC2', 'Internal Tool']
+                    },
           {
             title: 'Aadhi Naturals - E-commerce Website',
             description: 'E-commerce storefront for natural products with clean product-first design. Hosted using AWS EC2.',
