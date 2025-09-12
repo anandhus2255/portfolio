@@ -195,10 +195,10 @@ const Projects = () => {
             live: 'https://thecid.in'
           },
           {
-            title: 'Kuvil - Official Website',
-            description: 'Brand website for instant Avil milk products with product showcase and responsive UI.',
-            tech: ['Production', 'Brand'],
-            live: 'https://kuvil.in'
+            title: 'Flyverse',
+            description: 'A client project for an instant Avil milk products delivery website. Features include product listings and responsive design. Built with React.',
+            tech: ['Study Abroad', 'Travels'],
+            live: 'https://www.flyverseoverseas.com/'
           },
           {
             title: 'MES Mampad Autonomous College - QP Printing Software',
