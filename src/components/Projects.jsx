@@ -189,7 +189,7 @@ const Projects = () => {
       <ProjectsGrid>
         {[
           {
-            title: 'Ceelar Innovative Developers - Official Website',
+            title: 'Cellar Innovative Developers - Official Website',
             description: 'Corporate site for a software development company with service pages and contact flow.',
             tech: ['Production', 'Corporate'],
             live: 'https://thecid.in'
